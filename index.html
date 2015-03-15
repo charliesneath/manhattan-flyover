@@ -1,5 +1,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 
 <style>
@@ -50,121 +51,41 @@
     #preload {
         display: none;
     }
-
-    .column#image-0:active ~ #current-image,
-    .column#image-0:hover ~ #current-image {
-        background-image: url("images/0.jpg");
-    }
-
-    .column#image-1:active ~ #current-image,
-    .column#image-1:hover ~ #current-image {
-        background-image: url("images/1.jpg");
-    }
-
-    .column#image-2:active ~ #current-image,
-    .column#image-2:hover ~ #current-image {
-        background-image: url("images/2.jpg");
-    }
-
-    .column#image-3:active ~ #current-image,
-    .column#image-3:hover ~ #current-image {
-        background-image: url("images/3.jpg");
-    }
-
-    .column#image-4:active ~ #current-image,
-    .column#image-4:hover ~ #current-image {
-        background-image: url("images/4.jpg");
-    }
-
-    .column#image-5:active ~ #current-image,
-    .column#image-5:hover ~ #current-image {
-        background-image: url("images/5.jpg");
-    }
-
-    .column#image-6:active ~ #current-image,
-    .column#image-6:hover ~ #current-image {
-        background-image: url("images/6.jpg");
-    }
-
-    .column#image-7:active ~ #current-image,
-    .column#image-7:hover ~ #current-image {
-        background-image: url("images/7.jpg");
-    }
-
-    .column#image-8:active ~ #current-image,
-    .column#image-8:hover ~ #current-image {
-        background-image: url("images/8.jpg");
-    }
-
-    .column#image-9:active ~ #current-image,
-    .column#image-9:hover ~ #current-image {
-        background-image: url("images/9.jpg");
-    }
-
-    .column#image-10:active ~ #current-image,
-    .column#image-10:hover ~ #current-image {
-        background-image: url("images/10.jpg");
-    }
-
-    .column#image-11:active ~ #current-image,
-    .column#image-11:hover ~ #current-image {
-        background-image: url("images/11.jpg");
-    }
-
-    .column#image-12:active ~ #current-image,
-    .column#image-12:hover ~ #current-image {
-        background-image: url("images/12.jpg");
-    }
-
-    .column#image-13:active ~ #current-image,
-    .column#image-13:hover ~ #current-image {
-        background-image: url("images/13.jpg");
-    }
-
-    .column#image-14:active ~ #current-image,
-    .column#image-14:hover ~ #current-image {
-        background-image: url("images/14.jpg");
-    }
-
-    .column#image-15:active ~ #current-image,
-    .column#image-15:hover ~ #current-image {
-        background-image: url("images/15.jpg");
-    }
-
-    .column#image-16:active ~ #current-image,
-    .column#image-16:hover ~ #current-image {
-        background-image: url("images/16.jpg");
-    }
-
-    .column#image-17:active ~ #current-image,
-    .column#image-17:hover ~ #current-image {
-        background-image: url("images/17.jpg");
-    }
 </style>
+
+<script>
+    $(function() {
+        $('.column').bind('touchstart mouseenter', function(e) {
+            $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+        })
+    })
+</script>
 
 <html>
     <h1>MANHATTAN FLYOVER</h1>
     <div id="background">
-        <div class="column" id="image-0"></div>
-        <div class="column" id="image-1"></div>
-        <div class="column" id="image-2"></div>
-        <div class="column" id="image-3"></div>
-        <div class="column" id="image-4"></div>
-        <div class="column" id="image-5"></div>
-        <div class="column" id="image-6"></div>
-        <div class="column" id="image-7"></div>
-        <div class="column" id="image-8"></div>
-        <div class="column" id="image-9"></div>
-        <div class="column" id="image-10"></div>
-        <div class="column" id="image-11"></div>
-        <div class="column" id="image-12"></div>
-        <div class="column" id="image-13"></div>
-        <div class="column" id="image-14"></div>
-        <div class="column" id="image-15"></div>
-        <div class="column" id="image-16"></div>
-        <div class="column" id="image-17"></div>
-        <div id="current-image"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
     </div>
+    
+    <div id="current-image"></div>
+
     <div id="preload">
         <img src="images/0.jpg">
         <img src="images/1.jpg">
