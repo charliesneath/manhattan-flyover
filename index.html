@@ -4,13 +4,24 @@
         padding: 0;
     }
 
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        z-index: 3;
+        width: 100%;
+        height: 50px;
+        line-height: 100px;
+        font-size: 200%;
+    }
+
     #background {
         display: flex;
         height: 100%;
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
         background-color: black;
     }
 
@@ -30,80 +41,103 @@
         z-index: 1;
     }
 
+    #preload {
+        display: none;
+    }
+
+    .column#city-0:active ~ #current-image,
     .column#city-0:hover ~ #current-image {
         background-image: url("city-0.jpg");
     }
 
+    .column#city-1:active ~ #current-image,
     .column#city-1:hover ~ #current-image {
         background-image: url("city-1.jpg");
     }
 
+    .column#city-2:active ~ #current-image,
     .column#city-2:hover ~ #current-image {
         background-image: url("city-2.jpg");
     }
 
+    .column#city-3:active ~ #current-image,
     .column#city-3:hover ~ #current-image {
         background-image: url("city-3.jpg");
     }
 
+    .column#city-4:active ~ #current-image,
     .column#city-4:hover ~ #current-image {
         background-image: url("city-4.jpg");
     }
 
+    .column#city-5:active ~ #current-image,
     .column#city-5:hover ~ #current-image {
         background-image: url("city-5.jpg");
     }
 
+    .column#city-6:active ~ #current-image,
     .column#city-6:hover ~ #current-image {
         background-image: url("city-6.jpg");
     }
 
+    .column#city-7:active ~ #current-image,
     .column#city-7:hover ~ #current-image {
         background-image: url("city-7.jpg");
     }
 
+    .column#city-8:active ~ #current-image,
     .column#city-8:hover ~ #current-image {
         background-image: url("city-8.jpg");
     }
 
+    .column#city-9:active ~ #current-image,
     .column#city-9:hover ~ #current-image {
         background-image: url("city-9.jpg");
     }
 
+    .column#city-10:active ~ #current-image,
     .column#city-10:hover ~ #current-image {
         background-image: url("city-10.jpg");
     }
 
+    .column#city-11:active ~ #current-image,
     .column#city-11:hover ~ #current-image {
         background-image: url("city-11.jpg");
     }
 
+    .column#city-12:active ~ #current-image,
     .column#city-12:hover ~ #current-image {
         background-image: url("city-12.jpg");
     }
 
+    .column#city-13:active ~ #current-image,
     .column#city-13:hover ~ #current-image {
         background-image: url("city-13.jpg");
     }
 
+    .column#city-14:active ~ #current-image,
     .column#city-14:hover ~ #current-image {
         background-image: url("city-14.jpg");
     }
 
+    .column#city-15:active ~ #current-image,
     .column#city-15:hover ~ #current-image {
         background-image: url("city-15.jpg");
     }
 
+    .column#city-16:active ~ #current-image,
     .column#city-16:hover ~ #current-image {
         background-image: url("city-16.jpg");
     }
 
+    .column#city-17:active ~ #current-image,
     .column#city-17:hover ~ #current-image {
         background-image: url("city-17.jpg");
     }
 </style>
 
 <html>
+    <h1>MANHATTAN FLYOVER</h1>
     <div id="background">
         <div class="column" id="city-0"></div>
         <div class="column" id="city-1"></div>
@@ -124,5 +158,25 @@
         <div class="column" id="city-16"></div>
         <div class="column" id="city-17"></div>
         <div id="current-image"></div>
+    </div>
+    <div id="preload">
+        <img src="city-0.jpg">
+        <img src="city-1.jpg">
+        <img src="city-2.jpg">
+        <img src="city-3.jpg">
+        <img src="city-4.jpg">
+        <img src="city-5.jpg">
+        <img src="city-6.jpg">
+        <img src="city-7.jpg">
+        <img src="city-8.jpg">
+        <img src="city-9.jpg">
+        <img src="city-10.jpg">
+        <img src="city-11.jpg">
+        <img src="city-12.jpg">
+        <img src="city-13.jpg">
+        <img src="city-14.jpg">
+        <img src="city-15.jpg">
+        <img src="city-16.jpg">
+        <img src="city-17.jpg">
     </div>
 </html>
