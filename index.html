@@ -60,6 +60,7 @@
         $('.column').bind('touchmove mouseenter', function(e) {
             if ($(this).index() !== currentIndex) {
                 var currentIndex = $(this).index();
+                $('#heading').html(currentIndex);
                 $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
             }
         })
@@ -67,7 +68,7 @@
 </script>
 
 <html>
-    <h1>MANHATTAN FLYOVER</h1>
+    <h1 id="heading">MANHATTAN FLYOVER</h1>
     <div id="background">
         <div class="column"></div>
         <div class="column"></div>
