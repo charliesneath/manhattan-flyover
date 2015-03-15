@@ -58,7 +58,7 @@
 
     $(function() {
         $('.column').bind('touchmove mouseenter', function(e) {
-            if ($(this).index() !== currentIndex)
+            if ($(this).index() !== currentIndex) {
                 var currentIndex = $(this).index();
                 $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
             }
