@@ -54,9 +54,14 @@
 </style>
 
 <script>
+    var currentIndex = null;
+
     $(function() {
-        $('.column').bind('touchmove', function(e) {
-            $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+        $('.column').bind('touchmove mouseenter', function(e) {
+            if ($(this).index() !== currentIndex)
+                var currentIndex = $(this).index();
+                $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+            }
         })
     })
 </script>
