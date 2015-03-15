@@ -57,12 +57,13 @@
     var currentIndex = null;
 
     $(function() {
-        $('.column').bind('touchmove mouseenter', function(e) {
-            if ($(this).index() !== currentIndex) {
-                var currentIndex = $(this).index();
-                $('#heading').html(currentIndex);
-                $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
-            }
+        $('.column').bind('touchstart', function(e) {
+            $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+        })
+
+        $('.column').bind('touchmove', function(e) {
+            $('#heading').html($(this).index());
+            // $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
         })
     })
 </script>
