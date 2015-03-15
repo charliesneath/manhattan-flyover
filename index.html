@@ -1,0 +1,128 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #background {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+    }
+
+    #current-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-size: cover;
+    }
+
+    .column {
+        flex: 1;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .column#city-0:hover ~ #current-image {
+        background-image: url("city-0.jpg");
+    }
+
+    .column#city-1:hover ~ #current-image {
+        background-image: url("city-1.jpg");
+    }
+
+    .column#city-2:hover ~ #current-image {
+        background-image: url("city-2.jpg");
+    }
+
+    .column#city-3:hover ~ #current-image {
+        background-image: url("city-3.jpg");
+    }
+
+    .column#city-4:hover ~ #current-image {
+        background-image: url("city-4.jpg");
+    }
+
+    .column#city-5:hover ~ #current-image {
+        background-image: url("city-5.jpg");
+    }
+
+    .column#city-6:hover ~ #current-image {
+        background-image: url("city-6.jpg");
+    }
+
+    .column#city-7:hover ~ #current-image {
+        background-image: url("city-7.jpg");
+    }
+
+    .column#city-8:hover ~ #current-image {
+        background-image: url("city-8.jpg");
+    }
+
+    .column#city-9:hover ~ #current-image {
+        background-image: url("city-9.jpg");
+    }
+
+    .column#city-10:hover ~ #current-image {
+        background-image: url("city-10.jpg");
+    }
+
+    .column#city-11:hover ~ #current-image {
+        background-image: url("city-11.jpg");
+    }
+
+    .column#city-12:hover ~ #current-image {
+        background-image: url("city-12.jpg");
+    }
+
+    .column#city-13:hover ~ #current-image {
+        background-image: url("city-13.jpg");
+    }
+
+    .column#city-14:hover ~ #current-image {
+        background-image: url("city-14.jpg");
+    }
+
+    .column#city-15:hover ~ #current-image {
+        background-image: url("city-15.jpg");
+    }
+
+    .column#city-16:hover ~ #current-image {
+        background-image: url("city-16.jpg");
+    }
+
+    .column#city-17:hover ~ #current-image {
+        background-image: url("city-17.jpg");
+    }
+</style>
+
+<html>
+    <div id="background">
+        <div class="column" id="city-0"></div>
+        <div class="column" id="city-1"></div>
+        <div class="column" id="city-2"></div>
+        <div class="column" id="city-3"></div>
+        <div class="column" id="city-4"></div>
+        <div class="column" id="city-5"></div>
+        <div class="column" id="city-6"></div>
+        <div class="column" id="city-7"></div>
+        <div class="column" id="city-8"></div>
+        <div class="column" id="city-9"></div>
+        <div class="column" id="city-10"></div>
+        <div class="column" id="city-11"></div>
+        <div class="column" id="city-12"></div>
+        <div class="column" id="city-13"></div>
+        <div class="column" id="city-14"></div>
+        <div class="column" id="city-15"></div>
+        <div class="column" id="city-16"></div>
+        <div class="column" id="city-17"></div>
+        <div id="current-image"></div>
+    </div>
+</html>
