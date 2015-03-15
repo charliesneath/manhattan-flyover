@@ -55,7 +55,7 @@
 
 <script>
     $(function() {
-        $('.column').bind('touchstart mouseenter', function(e) {
+        $('.column').bind('mouseenter', function(e) {
             $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
         })
     })
