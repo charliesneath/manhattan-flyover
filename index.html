@@ -57,6 +57,7 @@
         position: absolute;
         width: 100%;
         opacity: 0;
+        background-color: red;
         z-index: 5;
         height: 100%;
     }
@@ -81,8 +82,9 @@
 
         // Shrinks the cursor so it doesn't go off the page.
         $('body').bind('touchstart', function(e) {
-            $('#cursor').height(1);
-            $('#cursor').width(1);
+            $('#cursor').opacity(1);
+            $('#cursor').height(100);
+            $('#cursor').width(100);
             var xPos = e.originalEvent.touches[1].pageX;
             var yPos = e.originalEvent.touches[1].pageY;
             $('#cursor').offset({top: xPos, left: yPos});
@@ -90,6 +92,7 @@
 
         // Resets the cursor every time you end the touch.
         $('body').bind('touchend', function(e) {
+            $('#cursor').opacity(0);
             $('#cursor').css('height', '100%');
             $('#cursor').css('width', '100%');
             $('#cursor').offset({top: 0, left: 0});
