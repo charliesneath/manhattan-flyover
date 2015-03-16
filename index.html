@@ -78,13 +78,13 @@
             $('#background').css('background-image', 'url(images/' + imgIndex + '.jpg)');
         })
 
-        $('body').bind('mousedown', function(e) {
+        $('body').bind('touchstart', function(e) {
             $('#cursor').height(10);
             $('#cursor').width(10);
             $('#cursor').offset({top: e.pageY - 5, left: e.pageX - 5});
         })
 
-        $('body').bind('mouseup', function(e) {
+        $('body').bind('touchend', function(e) {
             $('#cursor').css('height', '100%');
             $('#cursor').css('width', '100%');
             $('#cursor').offset({top: 0, left: 0});
