@@ -64,23 +64,18 @@
             containment: 'document'
         });
 
+        $('body').bind('mousedown', function(e) {
+            $('#background').fadeIn(500);
+        });
+
         $('body').bind('mousemove', function(e) {
-            if (!awake) {
-                $(this).stop();
-                var awake = true;
-                $('#background').fadeIn(500);
-            }
-
-            clearTimeout(sleep);
-            sleep = setTimeout(function() {
-                var awake = false;
-                $('#background').fadeOut(150);
-            }, 500);
-
             // 18 photos in total. Segment the page into 18 columns for each one.
             var imgIndex = parseInt( (e.pageX/$(document).width()) * 18);
             $('#background').css('background-image', 'url(images/' + imgIndex + '.jpg)');
+        })
 
+        $('body').bind('mouseup', function(e) {
+            $('#background').fadeOut(500);
         })
     })
 </script>
