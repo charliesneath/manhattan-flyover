@@ -67,8 +67,6 @@
     var currentIndex = null;
 
     $(function() {
-        // $('#cursor').draggable();
-
         $('#cursor').draggable({
             containment: 'document'
         });
@@ -85,9 +83,9 @@
             $('#cursor').opacity(.5);
             $('#cursor').height(100);
             $('#cursor').width(100);
-            var xPos = e.originalEvent.touches[0].pageX;
-            var yPos = e.originalEvent.touches[0].pageY;
-            $('#cursor').offset({top: xPos, left: yPos});
+            // var xPos = e.originalEvent.touches[0].pageX;
+            // var yPos = e.originalEvent.touches[0].pageY;
+            // $('#cursor').offset({top: xPos, left: yPos});
         })
 
         // Resets the cursor every time you end the touch.
