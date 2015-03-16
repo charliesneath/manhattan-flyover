@@ -24,12 +24,9 @@
         font-family: sans-serif;
         width: 100%;
         font-size: 300%;
-        margin-top: 30%;
+        margin-top: 10%;
         z-index: 1;
-        -webkit-transition: all .5s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
+        letter-spacing: -2.5;
     }
 
     #background {
@@ -66,9 +63,7 @@
 
         $('body').bind('mousemove', function(e) {
             if (!intro) {
-                $('#heading').css('margin-top', '10%');
-                $('#heading').css('font-size', '300%');
-                $('#background').fadeIn(200);
+                $('#background').fadeIn(1000);
             }
 
             // 18 photos in total. Segment the page into 18 columns for each one.
@@ -79,7 +74,7 @@
 </script>
 
 <html>
-    <h1 id="heading">MANHATTAN FLYOVER</h1>
+    <h1 id="heading">Manhattan Flyover</h1>
 
     <div id="cursor"></div>
     <div id="background"></div>
