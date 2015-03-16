@@ -76,7 +76,6 @@
         $('body').bind('mousemove', function(e) {
             // 18 photos in total. Segment the page into 18 columns for each one.
             var imgIndex = parseInt( (e.pageX/$(document).width()) * 18);
-            $('#heading').text(imgIndex);
             $('#background').css('background-image', 'url(images/' + imgIndex + '.jpg)');
         })
 
@@ -92,7 +91,7 @@
 
         // Resets the cursor every time you end the touch.
         $('body').bind('touchend', function(e) {
-            $('#cursor').opacity(0);
+            // $('#cursor').css('opacity', ;0);
             $('#cursor').css('height', '100%');
             $('#cursor').css('width', '100%');
             $('#cursor').offset({top: 0, left: 0});
