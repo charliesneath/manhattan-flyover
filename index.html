@@ -81,7 +81,9 @@
         $('body').bind('touchstart', function(e) {
             $('#cursor').height(10);
             $('#cursor').width(10);
-            $('#cursor').offset({top: e.pageY - 5, left: e.pageX - 5});
+            var xPos = e.originalEvent.touches[0].pageX;
+            var yPos = e.originalEvent.touches[0].pageY;
+            $('#cursor').offset({top: xPos - 5, left: yPos - 5});
         })
 
         $('body').bind('touchend', function(e) {
