@@ -55,21 +55,31 @@
 </style>
 
 <script>
+    var awake = false;
+    var sleep = false;
+    
     $(function() {
-        var intro = false;
-
         $('#cursor').draggable({
             containment: 'document'
         });
 
         $('body').bind('mousemove', function(e) {
-            if (!intro) {
-                $('#background').fadeIn(1000);
+            if (!awake) {
+                $(this).stop();
+                var awake = true;
+                $('#background').fadeIn(500);
             }
+
+            clearTimeout(sleep);
+            sleep = setTimeout(function() {
+                var awake = false;
+                $('#background').fadeOut(150);
+            }, 500);
 
             // 18 photos in total. Segment the page into 18 columns for each one.
             var imgIndex = parseInt( (e.pageX/$(document).width()) * 18);
             $('#background').css('background-image', 'url(images/' + imgIndex + '.jpg)');
+
         })
     })
 </script>
