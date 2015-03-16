@@ -57,7 +57,7 @@
     var currentIndex = null;
 
     $(function() {
-        $('.column').bind('scroll touchstart', function(e) {
+        $('.column').bind('scroll touchstart mouseenter', function(e) {
             $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
         })
 
