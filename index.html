@@ -56,8 +56,7 @@
     #cursor {
         position: absolute;
         width: 100%;
-        background-color: white;
-        opacity: .5;
+        opacity: 0;
         z-index: 5;
         height: 100%;
     }
@@ -70,7 +69,7 @@
         // $('#cursor').draggable();
 
         $('#cursor').draggable({
-            containment: "document"
+            containment: 'document'
         });
 
         $('body').bind('mousemove', function(e) {
@@ -84,8 +83,8 @@
         $('body').bind('touchstart', function(e) {
             $('#cursor').height(1);
             $('#cursor').width(1);
-            var xPos = e.originalEvent.touches[0].pageX;
-            var yPos = e.originalEvent.touches[0].pageY;
+            var xPos = e.originalEvent.touches[1].pageX;
+            var yPos = e.originalEvent.touches[1].pageY;
             $('#cursor').offset({top: xPos, left: yPos});
         })
 
