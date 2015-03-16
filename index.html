@@ -56,10 +56,10 @@
     #cursor {
         position: absolute;
         width: 100%;
+        height: 100%;
         opacity:100;
         background-color: red;
         z-index: 5;
-        height: 100%;
     }
 </style>
 
@@ -82,7 +82,7 @@
 
         // Shrinks the cursor so it doesn't go off the page.
         $('body').bind('touchstart', function(e) {
-            $('#cursor').opacity(.5);
+            $('#cursor').css('opacity', '0.5');
             $('#cursor').height(100);
             $('#cursor').width(100);
             // var xPos = e.originalEvent.touches[0].pageX;
