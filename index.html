@@ -57,11 +57,11 @@
     var currentIndex = null;
 
     $(function() {
-        $('.column').bind('touchstart', function(e) {
+        $('.column').bind('scroll touchstart', function(e) {
             $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
         })
 
-        $('.column').bind('touchmove', function(e) {
+        $('.column').bind('scroll', function(e) {
             $('#heading').html($(this).index());
             // $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
         })
