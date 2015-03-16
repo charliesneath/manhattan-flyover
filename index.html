@@ -82,7 +82,7 @@
 
         // Shrinks the cursor so it doesn't go off the page.
         $('body').bind('touchstart', function(e) {
-            $('#cursor').opacity(1);
+            $('#cursor').opacity(.5);
             $('#cursor').height(100);
             $('#cursor').width(100);
             var xPos = e.originalEvent.touches[0].pageX;
