@@ -67,7 +67,7 @@
     var currentIndex = null;
 
     $(function() {
-        // $('#cursor').draggable();
+        $('#cursor').draggable();
 
         // $('#cursor').draggable({
         //     containment: 'document'
@@ -85,8 +85,8 @@
             $('#cursor').css('opacity', '0.5');
             $('#cursor').height(100);
             $('#cursor').width(100);
-            // var xPos = e.originalEvent.touches[0].pageX;
-            // var yPos = e.originalEvent.touches[0].pageY;
+            var xPos = e.originalEvent.touches[1].pageX;
+            var yPos = e.originalEvent.touches[1].pageY;
             // $('#cursor').offset({top: xPos, left: yPos});
         })
 
