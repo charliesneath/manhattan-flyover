@@ -1,6 +1,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
 </head>
 
 <style>
@@ -31,7 +32,7 @@
         background-color: black;
     }
 
-    #current-image {
+    #background {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -51,47 +52,51 @@
     #preload {
         display: none;
     }
+
+    #cursor {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        opacity: .5;
+        z-index: 5;
+        height: 100%;
+    }
 </style>
 
 <script>
     var currentIndex = null;
 
     $(function() {
-        $('.column').bind('scroll touchstart mouseenter', function(e) {
-            $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+        // $('#cursor').draggable();
+
+        $('#cursor').draggable();
+
+        $('body').bind('mousemove', function(e) {
+            // 18 photos in total. Segment the page into 18 columns for each one.
+            var imgIndex = parseInt( (e.pageX/$(document).width()) * 18);
+            $('#heading').text(imgIndex);
+            $('#background').css('background-image', 'url(images/' + imgIndex + '.jpg)');
         })
 
-        $('.column').bind('touchmove scroll', function(e) {
-            $('#heading').html($(this).index());
-            // $('#current-image').css('background-image', 'url(images/' + $(this).index() + '.jpg)');
+        $('body').bind('mousedown', function(e) {
+            $('#cursor').height(10);
+            $('#cursor').width(10);
+            $('#cursor').offset({top: e.pageY - 5, left: e.pageX - 5});
+        })
+
+        $('body').bind('mouseup', function(e) {
+            $('#cursor').css('height', '100%');
+            $('#cursor').css('width', '100%');
+            $('#cursor').offset({top: 0, left: 0});
         })
     })
 </script>
 
 <html>
     <h1 id="heading">MANHATTAN FLYOVER</h1>
-    <div id="background">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-    </div>
-    
-    <div id="current-image"></div>
+
+    <div id="cursor"></div>
+    <div id="background"></div>
 
     <div id="preload">
         <img src="images/0.jpg">
